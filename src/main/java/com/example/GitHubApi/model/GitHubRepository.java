@@ -12,6 +12,7 @@ public class GitHubRepository {
     private LinkedHashMap<String, Object> owner;
     private String ownerLogin;
     private List<GitHubBranch> branches;
+    private boolean fork;
 
     public void fillOwnerLogin() {
         ownerLogin = owner.get("login").toString();
@@ -19,5 +20,13 @@ public class GitHubRepository {
 
     private LinkedHashMap<String, Object> getOwner() {
         return owner;
+    }
+
+    public boolean isFork(){
+        return fork;
+    }
+
+    private boolean getFork() {
+        return fork;
     }
 }

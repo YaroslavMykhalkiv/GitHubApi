@@ -12,6 +12,7 @@ public class GitHubConfig {
 
     @Bean
     public WebClient webClient() {
-        return WebClient.builder().defaultHeader(HttpHeaders.AUTHORIZATION, "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").baseUrl("https://api.github.com").build();
+        return WebClient.builder()
+                .baseUrl("https://api.github.com").build();
     }
 }
